@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { assets } from "../assets/assets";
 import Title from "../components/Title";
-import { useAppContext } from "../context/AppContext";
+import { useAppcontext } from "../context/Appcontext";
 import toast from "react-hot-toast";
 import { motion } from 'motion/react'
 
 const MyBookings = () => {
-  const { axios, user, currency } = useAppContext()
+  const { axios, user, currency } = useAppcontext()
   const [bookings, setBookings] = useState([]);
   const fetchMyBookings = async () => {
 

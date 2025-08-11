@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { assets } from "../../assets/assets";
 import Title from "../../components/owner/Title";
-import { useAppContext } from "../../context/AppContext";
+import { useAppcontext } from "../../context/Appcontext";
 import toast from "react-hot-toast";
 
 const ManageCars = () => {
-  const { isOwner, axios, currency } = useAppContext();
+  const { isOwner, axios, currency } = useAppcontext();
   const [cars, setCars] = useState([]);
 
   const fetchOwnerCars = async () => {

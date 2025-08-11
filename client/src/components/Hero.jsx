@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { assets, cityList } from "../assets/assets";
-import { useAppContext } from "../context/AppContext";
+import { useAppcontext } from "../context/Appcontext";
 import { motion } from "motion/react";
 
 const Hero = () => {
   const [pickupLocation, setPickupLocation] = useState("");
 
   // Destructure your context values properly
-  const { pickupDate, setPickupDate, returnDate, setReturnDate, navigate } = useAppContext();
+  const { pickupDate, setPickupDate, returnDate, setReturnDate, navigate } = useAppcontext();
 
   const handleSearch = (e) => {
     e.preventDefault();

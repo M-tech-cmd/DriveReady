@@ -3,12 +3,12 @@ import Title from "./Title";
 import { assets } from "../assets/assets";
 import CarCard from "./CarCard";
 import { useNavigate } from "react-router-dom";
-import { useAppContext } from "../context/AppContext";
+import { useAppcontext } from "../context/Appcontext";
 import {motion} from "motion/react"
 
 const FeaturedSection = () => {
     const navigate = useNavigate()
-    const {cars} = useAppContext()
+    const {cars} = useAppcontext()
   return (
     <motion.div
     initial={{opacity:0,y: 40 }}

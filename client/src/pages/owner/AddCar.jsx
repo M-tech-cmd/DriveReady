@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import Title from '../../components/owner/Title'
 import { assets } from '../../assets/assets'
-import { useAppContext } from '../../context/AppContext'
+import { useAppcontext } from '../../context/Appcontext'
 import toast from 'react-hot-toast'
 
 const AddCar = () => {
-    const { axios, currency } = useAppContext()
+    const { axios, currency } = useAppcontext()
 
     const [image, setImage] = useState(null)
     const [car, setCar] = useState({

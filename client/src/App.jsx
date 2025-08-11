@@ -13,11 +13,11 @@ import ManageCars from "./pages/owner/ManageCars";
 import ManageBookings from "./pages/owner/ManageBookings";
 import Login from "./components/Login";
 import { Toaster } from "react-hot-toast";
-import { useAppContext } from "./context/AppContext";
+import { useAppcontext } from "./context/Appcontext";
 
 const App = () => {
   // const [showLogin, setShowLogin] = useState(false);
-  const { showLogin } = useAppContext();
+  const { showLogin } = useAppcontext();
   const isOwnerPath = useLocation().pathname.startsWith("/owner");
 
   return (
