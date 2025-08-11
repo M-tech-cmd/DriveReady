@@ -3,7 +3,7 @@ import Title from "../components/Title";
 import { assets } from "../assets/assets";
 import CarCard from "../components/CarCard";
 import { useSearchParams } from "react-router-dom";
-import { useAppcontext } from "../context/Appcontext";
+import { useAppContext } from "../context/AppContext";
 import toast from "react-hot-toast";
 import {motion} from 'motion/react'
 
@@ -14,7 +14,7 @@ const Cars = () => {
   const returnDate = searchParams.get('returnDate');
   const [input, setInput] = useState("");
 
-  const { cars, axios } = useAppcontext();
+  const { cars, axios } = useAppContext();
   const isSearchData = pickupLocation && pickupDate && returnDate;
   const [filterCars, setFilterdCars] = useState([]);
 
