@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { assets } from '../../assets/assets'
 import Title from '../../components/owner/Title'
-import { useAppcontext } from '../../context/Appcontext'
+import { useAppContext } from '../../context/AppContext'
 import toast from 'react-hot-toast'
 
 const Dashboard = () => {
 
-  const { axios, isOwner, currency } = useAppcontext()
+  const { axios, isOwner, currency } = useAppContext()
   const [data, setData] = useState({
     totalCars: 0,
     totalBookings: 0,

@@ -1,10 +1,10 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
 import { Link } from 'react-router-dom';
-import { useAppcontext } from '../../context/Appcontext'
+import { useAppContext } from '../../context/AppContext'
 const NavbarOwner = () => {
 
-    const {user} = useAppcontext()
+    const {user} = useAppContext()
 
   return (
     <div className='flex items-center justify-between px-6

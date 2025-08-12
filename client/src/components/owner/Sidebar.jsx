@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { assets, ownerMenuLinks } from '../../assets/assets';
 import { NavLink, useLocation } from 'react-router-dom';
-import { useAppcontext } from '../../context/Appcontext'
+import { useAppContext } from '../../context/AppContext'
 import toast from 'react-hot-toast';
 
 const Sidebar = () => {
-   const {user, axios, fetchUser} = useAppcontext()
+   const {user, axios, fetchUser} = useAppContext()
    const location = useLocation()
    const [image, setImage] = useState('')
 
