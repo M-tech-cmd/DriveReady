@@ -1,4 +1,4 @@
-import { createcontext, usecontext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
@@ -7,9 +7,9 @@ import { useNavigate } from "react-router-dom";
 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 
 // Create context
-export const Appcontext = createcontext();
+export const AppContext = createContext();
 
-// context Provider
+// Context Provider
 export const AppProvider = ({ children }) => {
   const navigate = useNavigate();
   const currency = import.meta.env.VITE_CURRENCY;
@@ -99,8 +99,8 @@ export const AppProvider = ({ children }) => {
     setReturnDate,
   };
 
-  return <Appcontext.Provider value={value}>{children}</Appcontext.Provider>;
+  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
 
 // Custom hook for using context
-export const useAppcontext = () => usecontext(Appcontext);
+export const useAppContext = () => useContext(AppContext);
